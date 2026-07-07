@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.member.Administrator;
+//import com.example.demo.member.Administrator;
 import com.example.demo.member.Member;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -13,5 +13,11 @@ public class DemoApplication {
 		System.out.println("---");
 		System.out.println(mj);
 		System.out.println(mj.toString());
+
+		mj.setAge(23);
+		mj.setEmail("mj@different.com");
+
+		System.out.println(mj.getAge());
+		System.out.println(mj.getEmail());
 	}
 }
