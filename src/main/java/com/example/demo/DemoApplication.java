@@ -7,18 +7,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DemoApplication {
 	public static void main(String[] args) {
-		Member first = Member.builder()
-				.name("first")
-				.email("first@example.com")
+		Member member = Member.builder()
+				.name("Aaron")
+				.email("aaron@example.com")
 				.build();
-		System.out.println(first);
+		System.out.println(member);
 
-		Member third = Member.builder()
-				.name("third")
-				.favorite("Book")
-				.favorite("K-Drama")
+		Member member2 = Member.builder()
+				// name, email을 제외한 필드는 설정 불가
+//				.id("123")
+//				.age("19")
 				.build();
-		System.out.println(third);
+		System.out.println(member2);
 
 	}
 }
