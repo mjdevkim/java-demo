@@ -6,30 +6,30 @@ import lombok.experimental.FieldDefaults;
 import java.time.LocalDate;
 import java.util.List;
 
-@Builder
 @ToString
 public class Member {
     private Long id;
     private String name;
-
     private int age;
+    private String email;
+    private List<String> hobbies;
+    private LocalDate createdAt = LocalDate.now();
 
-    @Builder.Default
-    private String email = "default@example.com";
-
-    @Singular
-    private List<String> favorites;
-
-    private LocalDate createdAt;
+    @Builder
+    public Member(String name, String email, int age, @Singular List<String> hobbies) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.hobbies = hobbies;
+    }
 
     public static class MemberBuilder {
         public MemberBuilder age(int age) {
-            if (age >= 30) {
-                throw new IllegalArgumentException("30세 이상은 입력할 수 없습니다.");
+            if (age < 0 || age > 100) {
+                throw new IllegalArgumentException("age는 0~100까지만 허용");
             }
-            this.age = age; // Builder.Default가 있으면 안됨
+            this.age = age;
             return this;
         }
     }
-
 }

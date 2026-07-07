@@ -7,24 +7,22 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DemoApplication {
 	public static void main(String[] args) {
-		Member first = Member.builder()
-				.name("first")
-				.email("first@example.com")
+		Member human = Member.builder()
+				.name("human")
+				.email("human@email.com")
+				.age(34)
+				.hobby("football")
+				.hobby("baseball")
 				.build();
-		System.out.println(first);
+		System.out.println(human);
 
-		Member third = Member.builder()
-				.name("third")
-				.favorite("Book")
-				.favorite("K-Drama")
+		Member alien = Member.builder()
+				.name("alien")
+				.email("alien@email.com")
+				.age(129)
+				.hobby("go to mars")
+				.hobby("watch star wars")
 				.build();
-		System.out.println(third);
-
-		Member fourth = Member.builder()
-				.name("fourth")
-				.age(33)
-				.build();
-		System.out.println(fourth); // Rejected
-
+		System.out.println(alien);
 	}
 }
