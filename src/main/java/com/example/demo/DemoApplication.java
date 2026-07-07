@@ -14,7 +14,7 @@ public class DemoApplication {
 		System.out.println(mj);
 		System.out.println(mj.toString());
 
-		mj.setAge(23);
+		// mj.setAge(23); 접근제어자를 Private으로 바꿔서 외부에서 호출 불가
 		mj.setEmail("mj@different.com");
 
 		System.out.println(mj.getAge());
