@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		Member mj = new Member("minjae required");
+		Member mj = new Member(1, "mj", 20, "");
 
 		System.out.println("---");
 		System.out.println(mj);
@@ -21,5 +21,3 @@ public class DemoApplication {
 		System.out.println(mj.getEmail());
 	}
 }
-
-// 좋은 코드 = 강제성을 부여하는 것. 느슨한 코드를 반성해야!
