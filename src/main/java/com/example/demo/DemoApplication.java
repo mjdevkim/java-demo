@@ -6,18 +6,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DemoApplication {
-
 	public static void main(String[] args) {
-		Member mj = new Member(1, "mj", 20, "");
+		Member first = Member.builder()
+				.name("first")
+				.email("first@example.com")
+				.build();
+		System.out.println(first);
 
-		System.out.println("---");
-		System.out.println(mj);
-		System.out.println(mj.toString());
+		Member third = Member.builder()
+				.name("third")
+				.favorite("Book")
+				.favorite("K-Drama")
+				.build();
+		System.out.println(third);
 
-		// mj.setAge(23); 접근제어자를 Private으로 바꿔서 외부에서 호출 불가
-		mj.setEmail("mj@different.com");
-
-		System.out.println(mj.getAge());
-		System.out.println(mj.getEmail());
 	}
 }
