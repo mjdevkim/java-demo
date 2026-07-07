@@ -8,17 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		Administrator admin1 = new Administrator("Arthur", "arthur@example.com", "DEVELOPER");
-		Administrator admin2 = new Administrator("Barney", "barney@example.com", "DESIGNER");
+		Member mj = new Member(1, "mj", 20, "");
 
 		System.out.println("---");
-		System.out.println(admin1);              // 객체
-		System.out.println(admin1.toString());   // 객체
-		System.out.println(admin1.getName());    // 필드 중 name
-
-		System.out.println("---");
-		System.out.println(admin2);              // 객체
-		System.out.println(admin2.toString());   // 객체
-		System.out.println(admin2.getName());    // 필드 중 name
+		System.out.println(mj);
+		System.out.println(mj.toString());
 	}
 }
