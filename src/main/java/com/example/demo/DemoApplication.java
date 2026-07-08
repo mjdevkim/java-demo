@@ -1,14 +1,16 @@
 package com.example.demo;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.util.Arrays;
 
 @SpringBootApplication
 public class DemoApplication {
 	public static void main(String[] args) {
-		System.out.println(TaxCalculator.taxRate); // new 없이도 사용 가능~
+		double myRate = TaxCalculator.calculateTax(2500);
+		System.out.println(myRate);
 
-		TaxCalculator taxCalculator1 = new TaxCalculator(1000);
-		System.out.println(taxCalculator1.getTaxedPrice());
-		System.out.println(TaxCalculator.taxRate);
+		// 예시: Arrays 클래스의 .sort() 메소드도 Static 메소드다.
+		int[] nums = {1,2,3};
+		Arrays.sort(nums);
 	}
 }

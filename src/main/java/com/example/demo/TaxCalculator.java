@@ -4,13 +4,10 @@ import lombok.Getter;
 
 @Getter
 public class TaxCalculator {
-    public static final double taxRate = 0.11;
+    public static final double TAX_RATE = 0.11;
 
-    private int originalPrice;
-    private double taxedPrice;
-
-    public TaxCalculator(int originalPrice) {
-        this.originalPrice = originalPrice;
-        this.taxedPrice = taxRate * originalPrice; // "this.taxRate"라고 굳이 할 필요 없음
+    // Static method 정적 메서드 = 유틸리티 메서드 (어디에서든 쓴다)
+    public static double calculateTax(int originalPrice) {
+        return TAX_RATE * originalPrice;
     }
 }
