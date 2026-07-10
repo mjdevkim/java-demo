@@ -1,11 +1,11 @@
-package com.example.demo;
+package com.example.demo.prices;
 
 
-public class PaymentPrice extends OriginalPrice {
+public class KoreaPaymentPrice extends OriginalPrice {
     private final static double TAX_RATE = 0.1;   // % of tax applied to product
     private int deliveryPrice;  // delivery fee to deliver product
 
-    public PaymentPrice(String name, int price, int deliveryPrice) {
+    public KoreaPaymentPrice(String name, int price, int deliveryPrice) {
         super(name, price);
         this.deliveryPrice = deliveryPrice;
     }

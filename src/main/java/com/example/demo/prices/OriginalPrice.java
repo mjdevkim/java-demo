@@ -1,6 +1,5 @@
-package com.example.demo;
+package com.example.demo.prices;
 
-import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

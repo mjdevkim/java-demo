@@ -1,9 +1,14 @@
 package com.example.demo.hero;
 
 import com.example.demo.Hero;
+import lombok.*;
 
 // Concrete = Class implements
+
+@AllArgsConstructor
 public class AgilityHero implements Hero {
+    @Getter
+    private String name;
 
     @Override
     public void attack() {
