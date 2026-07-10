@@ -1,9 +1,8 @@
 package com.example.demo.hero;
 
-import com.example.demo.Hero;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-// Concrete = Class implements
 
 @AllArgsConstructor
 public class AgilityHero implements Hero {
@@ -12,11 +11,11 @@ public class AgilityHero implements Hero {
 
     @Override
     public void attack() {
-        System.out.println("Agility attack");
+        System.out.println("Agility Attack!");
     }
 
     @Override
     public void ultimate() {
-        System.out.println("Agility ultimate attack!");
+        System.out.println("Ultimate Agility Attack!");
     }
 }

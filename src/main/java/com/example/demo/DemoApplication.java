@@ -1,20 +1,16 @@
 package com.example.demo;
 
-import com.example.demo.hero.AgilityHeroRepository;
-import com.example.demo.prices.CanadaPaymentPrice;
-import com.example.demo.prices.OriginalPrice;
-import com.example.demo.prices.KoreaPaymentPrice;
+//import com.example.demo.hero.AgilityHeroRepository;
+import com.example.demo.hero.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DemoApplication {
 	public static void main(String[] args) {
-		HeroRepository heroRepository = new AgilityHeroRepository();
+		HeroRepository heroRepo = new AgilityHeroRepository();
+		Hero hero = heroRepo.readHero("Quicksilver");
 
-//		heroRepository.deleteHero("Slark");
-		Hero selectedHero = heroRepository.readHero("Power Ranger");
-
-		IGameService gameService = new TwoCoinGameService(selectedHero);
-		gameService.play();
+		IGameService gameService = new OneCoinGameService();
+		gameService.play(hero);
 	}
 }
