@@ -3,11 +3,11 @@ package com.example.demo.hero;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+public class AgilityHero extends BasicHero {
 
-@AllArgsConstructor
-public class AgilityHero implements Hero {
-    @Getter
-    private String name;
+    public AgilityHero(String name) {
+        super(name);
+    }
 
     @Override
     public void attack() {
