@@ -6,15 +6,31 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DemoApplication {
 	public static void main(String[] args) {
-		HeroRepository heroRepo = new AgilityHeroRepository(new Hero[]{
+		// Agility Hero
+		CrudRepository<AgilityHero> agilityHeroRepo = new AgilityHeroRepository(new AgilityHero[]{
 				new AgilityHero("Quicksilver"),
 				new AgilityHero("Iron Man"),
-				new AgilityHero("Bolt")
+				new AgilityHero("Bolt"),
+				new AgilityHero("Mob Psycho 100")
 		});
-		Hero selectedHero = heroRepo.readHero("Quicksilver");
+		agilityHeroRepo.create(new AgilityHero("New Hero!"));
 
-		System.out.println("Player Name: " + selectedHero.getName());
+		Hero selectedHero = agilityHeroRepo.read("New Hero!");
+
+		System.out.println("\nPlayer Name: " + selectedHero.getName());
 		TwoCoinGameService game = new TwoCoinGameService();
 		game.play(selectedHero);
+
+		// Strength Hero
+		CrudRepository<StrengthHero> strenghHeroRepo = new StrengthHeroRepository(new StrengthHero[]{
+				new StrengthHero("Hulk")
+		});
+		strenghHeroRepo.create(new StrengthHero("Hulk II"));
+		Hero selectedHero2 = strenghHeroRepo.read("Hulk II");
+
+		System.out.println("\nPlayer 2 Name: " + selectedHero2.getName());
+		OneCoinGameService game2 = new OneCoinGameService();
+		game2.play(selectedHero2);
+
 	}
 }
