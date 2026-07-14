@@ -36,12 +36,13 @@ public class DemoApplication {
 
 //		MakingRamen ramen = new MakingShinRamen();
 //		ramen.boiling();
-		AgilityHero hulk = new AgilityHero("Hulk");
-		CrudRepository<AgilityHero> cacheRepository = new CacheAgilityHeroRepository(
-				new AgilityHero[] {
-						new SuperAgilityHero(hulk),
-						new AgilityHero("quick")
-				}
-		);
+//		AgilityHero hulk = new AgilityHero("Hulk");
+//		CrudRepository<AgilityHero> cacheRepository = new CacheAgilityHeroRepository(
+//				new AgilityHero[] {
+//						new SuperAgilityHero(hulk),
+//						new AgilityHero("quick")
+//				}
+//		);
+
 	}
 }

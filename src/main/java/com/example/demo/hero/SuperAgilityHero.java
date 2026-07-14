@@ -1,5 +1,6 @@
 package com.example.demo.hero;
 
+// Decorator
 public class SuperAgilityHero extends AgilityHero {
     private final AgilityHero actual;
 
@@ -10,19 +11,15 @@ public class SuperAgilityHero extends AgilityHero {
 
     @Override
     public void attack() {
-        // pre
         this.actual.attack();
         this.actual.attack();
-        // post
     }
 
     @Override
     public void ultimate() {
-        // pre
         this.actual.ultimate();
         this.actual.ultimate();
         this.actual.ultimate();
-        // post
     }
 
 }
