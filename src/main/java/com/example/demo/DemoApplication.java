@@ -33,7 +33,15 @@ public class DemoApplication {
 //		System.out.println("\nPlayer 2 Name: " + selectedHero2.getName());
 //		OneCoinGameService game2 = new OneCoinGameService();
 //		game2.play(selectedHero2);
-		MakingRamen ramen = new MakingShinRamen();
-		ramen.boiling();
+
+//		MakingRamen ramen = new MakingShinRamen();
+//		ramen.boiling();
+		AgilityHero hulk = new AgilityHero("Hulk");
+		CrudRepository<AgilityHero> cacheRepository = new CacheAgilityHeroRepository(
+				new AgilityHero[] {
+						new SuperAgilityHero(hulk),
+						new AgilityHero("quick")
+				}
+		);
 	}
 }
