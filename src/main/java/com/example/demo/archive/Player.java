@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.archive;
 
 import com.example.demo.hero.Hero;
 import lombok.AccessLevel;
